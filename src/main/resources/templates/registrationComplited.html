@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Successfully registered</title>
+    <style>
+        body {
+            background-color: #f6f6ff;
+            font-family: Calibri, Myriad;
+        }
+
+        span {
+            color: blue;
+        }
+
+        .inline {
+            text-align: center;
+            display: block;
+            position: relative;
+            width: 35%;
+            margin: 100px auto;
+            display: table;
+            margin: 0 auto;
+            margin-top: 10%;
+        }
+
+        .message {
+            font-size: large;
+            font-family: Arial,Calibri;
+            color: #f79646;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="inline">
+
+    <div class="message">
+        HELLO: <span th:utext="${flashUser.login}">..</span><br><br>
+        <h1>CONGRATULATIONS!</h1><br><br>
+        <h1>REGISTRATION COMPLETED SUCCESSFULLY!</h1>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Successfully registered</title>
+    <style>
+        body {
+            background-color: #f6f6ff;
+            font-family: Calibri, Myriad;
+        }
+
+        span {
+            color: blue;
+        }
+
+        .inline {
+            text-align: center;
+            display: block;
+            position: relative;
+            width: 35%;
+            margin: 100px auto;
+            display: table;
+            margin: 0 auto;
+        }
+
+        .message {
+            font-size: large;
+            font-family: Arial,Calibri;
+            color: #f79646;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="inline">
+    <h1>Confirm Email</h1>
+
+    <div th:if="${flashUser != null}" class="message">
+        User Login: <span th:utext="${flashUser.login}">..</span><br><br>
+        To confirm your email follow the link in message that was sent to your email<br><br>
+        Email: <span th:utext="${flashUser.email}">..</span><br>
+    </div>
+</div>
+</body>
+</html>
